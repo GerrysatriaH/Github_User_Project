@@ -18,7 +18,7 @@ abstract class NetworkOnlyResource<ResultType, RequestType> {
                 })
             }
             is ApiResponse.Error -> {
-                emit(Resource.Error<ResultType>(apiResponse.errorMessage))
+                emit(Resource.Error(apiResponse.errorMessage))
             }
         }
     }
