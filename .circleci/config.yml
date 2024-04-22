@@ -11,9 +11,6 @@ jobs:
       - restore_cache:
           key: android-orb-v1-
       - run:
-          name: Set Java 17
-          command: sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
-      - run:
           name: Chmod permissions
           command: sudo chmod +x ./gradlew
       - run:
