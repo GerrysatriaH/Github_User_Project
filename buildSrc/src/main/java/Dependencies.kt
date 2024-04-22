@@ -9,6 +9,9 @@ private fun DependencyHandler.androidTestImplementation(dependency: Any) =
 private fun DependencyHandler.testImplementation(dependency: Any) =
     add("testImplementation", dependency)
 
+private fun DependencyHandler.debugImplementation(dependency: Any) =
+    add("debugImplementation", dependency)
+
 fun DependencyHandler.applySharedDepends() {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -22,4 +25,6 @@ fun DependencyHandler.applySharedDepends() {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     testImplementation("junit:junit:4.13.2")
+
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.10")
 }
